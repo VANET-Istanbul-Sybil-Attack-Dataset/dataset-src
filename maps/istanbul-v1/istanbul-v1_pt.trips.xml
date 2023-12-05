@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generated on 2023-08-03 00:13:07.480259 by $Id: ptlines2flows.py v1_3_1+0313-ccb31df3eb jakob.erdmann@dlr.de 2019-09-02 13:26:32 +0200 $ v1_8_0+0000-4820708f3db
+  options: -n /home/user/sumo-map/istanbul-v1/istanbul-v1.net.xml -e 4800 <doubleminus>random-begin <doubleminus>seed 576419 <doubleminus>ptstops /home/user/sumo-map/istanbul-v1/istanbul-v1_stops.add.xml <doubleminus>ptlines /home/user/sumo-map/istanbul-v1/istanbul-v1_ptlines.xml -o /home/user/sumo-map/istanbul-v1/istanbul-v1_pt.rou.xml <doubleminus>ignore-errors <doubleminus>vtype-prefix pt_ <doubleminus>stopinfos-file /home/user/sumo-map/istanbul-v1/istanbul-v1_pt.stopinfos.xml <doubleminus>routes-file /home/user/sumo-map/istanbul-v1/istanbul-v1_pt.vehroutes.xml <doubleminus>trips-file /home/user/sumo-map/istanbul-v1/istanbul-v1_pt.trips.xml <doubleminus>min-stops 0 <doubleminus>extend-to-fringe <doubleminus>verbose
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="pt_bus" vClass="bus"/>
+    <vType id="pt_tram" vClass="tram"/>
+    <vType id="pt_train" vClass="rail"/>
+    <vType id="pt_subway" vClass="rail_urban"/>
+    <vType id="pt_light_rail" vClass="rail_urban"/>
+    <vType id="pt_monorail" vClass="rail"/>
+    <vType id="pt_trolleybus" vClass="bus"/>
+    <vType id="pt_aerialway" vClass="bus"/>
+    <vType id="pt_ferry" vClass="ship"/>
+    <trip id="0_bus_77A:0" type="pt_bus" depart="26" departLane="best" from="1066826599" to="23276957">
+    </trip>
+    <trip id="1_bus_47Ç:0" type="pt_bus" depart="48" departLane="best" from="1006582996" to="1006582996">
+        <stop busStop="5115237221" duration="30"/>
+    </trip>
+    <trip id="2_bus_70KE:0" type="pt_bus" depart="92" departLane="best" from="43915455#0" to="837903919#0">
+        <stop busStop="5115237221" duration="30"/>
+    </trip>
+    <trip id="5_bus_EM1:0" type="pt_bus" depart="193" departLane="best" from="23236930#0" to="35411077#3">
+        <stop busStop="5115237221" duration="30"/>
+    </trip>
+    <trip id="6_bus_EM2:0" type="pt_bus" depart="239" departLane="best" from="1006582996" to="1006582996">
+        <stop busStop="5115237221" duration="30"/>
+    </trip>
+    <trip id="7_bus_26:0" type="pt_bus" depart="266" departLane="best" from="43915455#0" to="837903919#0">
+        <stop busStop="5115237221" duration="30"/>
+    </trip>
+    <trip id="8_bus_28:0" type="pt_bus" depart="298" departLane="best" from="43915455#0" to="837903919#0">
+        <stop busStop="5115237221" duration="30"/>
+    </trip>
+</routes>

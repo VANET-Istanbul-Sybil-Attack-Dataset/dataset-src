@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Thu Aug  3 00:13:07 2023 by Eclipse SUMO sumo Version 1.8.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/user/sumo-map/istanbul-v1/istanbul-v1.net.xml"/>
+        <route-files value="/home/user/sumo-map/istanbul-v1/istanbul-v1_pt.trips.xml"/>
+        <additional-files value="/home/user/sumo-map/istanbul-v1/istanbul-v1_stops.add.xml"/>
+    </input>
+
+    <output>
+        <vehroute-output value="/home/user/sumo-map/istanbul-v1/istanbul-v1_pt.vehroutes.xml"/>
+        <stop-output value="/home/user/sumo-map/istanbul-v1/istanbul-v1_pt.stopinfos.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+    </time>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-interval value="0"/>
+    </routing>
+
+    <report>
+        <error-log value="/home/user/sumo-map/istanbul-v1/istanbul-v1_pt.trips.xml.errorlog"/>
+        <no-step-log value="true"/>
+    </report>
+
+</configuration>
+-->
+
+<stops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/stopinfo_file.xsd">
+    <stopinfo id="1_bus_47Ç:0" type="pt_bus" lane="1006582996_0" pos="8.30" parking="0" started="49.00" ended="79.00" delay="-1.00" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0" busStop="5115237221"/>
+    <stopinfo id="6_bus_EM2:0" type="pt_bus" lane="1006582996_0" pos="8.30" parking="0" started="240.00" ended="270.00" delay="-1.00" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0" busStop="5115237221"/>
+    <stopinfo id="2_bus_70KE:0" type="pt_bus" lane="1006582996_0" pos="8.28" parking="0" started="336.00" ended="366.00" delay="-1.00" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0" busStop="5115237221"/>
+    <stopinfo id="5_bus_EM1:0" type="pt_bus" lane="1006582996_0" pos="8.30" parking="0" started="397.00" ended="427.00" delay="-1.00" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0" busStop="5115237221"/>
+    <stopinfo id="7_bus_26:0" type="pt_bus" lane="1006582996_0" pos="8.27" parking="0" started="510.00" ended="540.00" delay="-1.00" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0" busStop="5115237221"/>
+    <stopinfo id="8_bus_28:0" type="pt_bus" lane="1006582996_0" pos="8.29" parking="0" started="632.00" ended="662.00" delay="-1.00" initialPersons="0" loadedPersons="0" unloadedPersons="0" initialContainers="0" loadedContainers="0" unloadedContainers="0" busStop="5115237221"/>
+</stops>

@@ -1,0 +1,9 @@
+
+<demand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/amitran/od.xsd">
+   <actorConfig id="veh_passenger">
+       <timeSlice duration="3600000" startTime="0">
+           <odPair amount="3000" origin="14" destination="11"/>
+           <odPair amount="3000" origin="12" destination="7"/>
+       </timeSlice>
+   </actorConfig>
+</demand>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+// Copyright (C) 2011 Christoph Sommer <sommer@ccs-labs.org>
+//
+// Documentation for these modules is at http://veins.car2x.org/
+//
+// SPDX-License-Identifier: (GPL-2.0-or-later OR CC-BY-SA-4.0)
+//
+// This program is free software; you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation; either version 2 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, write to the Free Software
+// Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+//
+// -
+//
+// At your option, you can also redistribute and/or modify this file
+// under a
+// Creative Commons Attribution-ShareAlike 4.0 International License.
+//
+// You should have received a copy of the license along with this
+// work.  If not, see <http://creativecommons.org/licenses/by-sa/4.0/>.
+-->
+
+<root>
+    <AnalogueModels>
+
+        <AnalogueModel type="ShadowingModel" thresholding="true">
+			<parameter name="dist0" type="double" value="1.0"/>
+			<parameter name="std_db" type="double" value="1.75"/>
+        </AnalogueModel>
+        
+        <AnalogueModel type="SimpleObstacleShadowing" thresholding="true">
+            <obstacles>
+<type id="amenity.waste_basket" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.books" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.railway" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.alcohol" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.bank" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.harbour" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.electronics" db-per-cut="9" db-per-meter="0.4" />
+<type id="leisure.sauna" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.lighthouse" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.courthouse" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.beverages" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.seafood" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.surveillance" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.commercial" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.gallery" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.hairdresser" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.train_station" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.taxi" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.trade" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.internet" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.marketplace" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.cafe" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.bag" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.dessert_shop" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.ice_cream" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.telephone" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.doityourself" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.hospital" db-per-cut="9" db-per-meter="0.4" />
+<type id="tourism.chalet" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.interior_decoration" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.umbrella_shop" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.car_parts" db-per-cut="9" db-per-meter="0.4" />
+<type id="waterway.dock" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.Bag_shop" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.shipment" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.locomotive" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.photo" db-per-cut="9" db-per-meter="0.4" />
+<type id="tourism.apartment" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.mosque" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.flagpole" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.outdoor" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.commercial" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.tower" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.Union_of_Chambers_of_Turkish_Engineers_and_Architects" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.bench" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.nursing_home" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.forest" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.fuel" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.hookah_shop" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.fishing" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.perfumery" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.building" db-per-cut="9" db-per-meter="0.4" />
+<type id="natural.tree" db-per-cut="9" db-per-meter="0.4" />
+<type id="waterway.boatyard" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.ruins" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.cosmetics" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.tailor" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.driving_school" db-per-cut="9" db-per-meter="0.4" />
+<type id="tourism.attraction" db-per-cut="9" db-per-meter="0.4" />
+<type id="leisure.sports_centre" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.embankment" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.musical_instrument" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.restaurant" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.soup_shop" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.mobile_phone" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.parking" db-per-cut="9" db-per-meter="0.4" />
+<type id="leisure.fitness_station" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.casino" db-per-cut="9" db-per-meter="0.4" />
+<type id="natural.coastline" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.monument" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.fountain" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.mosqe" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.roof" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.blacksmith" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.events_venue" db-per-cut="9" db-per-meter="0.4" />
+<type id="natural.strait" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.yes" db-per-cut="9" db-per-meter="0.4" />
+<type id="leisure.residential" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.industrial" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.clothes" db-per-cut="9" db-per-meter="0.4" />
+<type id="tourism.museum" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.bus_station" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.religious" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.university" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.amenity" db-per-cut="9" db-per-meter="0.4" />
+<type id="population.15840900" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.collector" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.optician" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.parking_entrance" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.apartments" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.fire_station" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.college" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.home goods" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.civic" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.Novelty_store" db-per-cut="9" db-per-meter="0.4" />
+<type id="sport.volleyball" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.community_centre" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.collapsed" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.glaziery" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.language_school" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.carpet_store" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.motorcycle_parking" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.house" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.gift" db-per-cut="9" db-per-meter="0.4" />
+<type id="leisure.park" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.water_works" db-per-cut="9" db-per-meter="0.4" />
+<type id="tourism.caravan_site" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.townhall" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.music" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.animals" db-per-cut="9" db-per-meter="0.4" />
+<type id="highway.services" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.advertising" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.street_cabinet" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.jewelry" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.university" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.butcher" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.obelisk" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.billiard_shop" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.military" db-per-cut="9" db-per-meter="0.4" />
+<type id="leisure.turkish_bath" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.computer" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.water_tap" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.district" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.meadow" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.police" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.hookah_lounge" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.dessert" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.retail" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.herbalist" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.fashion_accessories" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.hunting_gear_shop" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.craft" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.school" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.yes" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.car_repair" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.laundry" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.art" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.toys" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.tyres" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.atm" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.radiotechnics" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.supermarket" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.motorcycle" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.bureau_de_change" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.school" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.kiosk" db-per-cut="9" db-per-meter="0.4" />
+<type id="leisure.playground" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.safe_vault_shop" db-per-cut="9" db-per-meter="0.4" />
+<type id="tourism.gallery" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.medical" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.studio" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.bicycle_parking" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.internet_cafe" db-per-cut="9" db-per-meter="0.4" />
+<type id="tourism.hostel" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.medical_supply" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.residential" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.confectionery" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.place_of_worship" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.mast" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.library" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.breakwater" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.industrial" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.clinic" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.terrace" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.cinema" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.newsagent" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.convenience" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.pet" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.bicycle" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.toilets" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.Athletic_Club" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.vending_machine" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.public_bath" db-per-cut="9" db-per-meter="0.4" />
+<type id="natural.grass" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.sports" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.recycling" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.cheese" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.survey_point" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.ferry_terminal" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.dry_cleaning" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.money_transfer" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.coffee" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.lighthouse" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.tower" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.yes" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.bridge" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.deli" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.business center" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.spices" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.service" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.leather" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.shopping_mall" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.church" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.government" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.yes" db-per-cut="9" db-per-meter="0.4" />
+<type id="leisure.fitness_centre" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.waste_disposal" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.copyshop" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.office" db-per-cut="9" db-per-meter="0.4" />
+<type id="aeroway.helipad" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.glass_bottles_shop" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.dentist" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.dorms" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.home_good_store" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.drinking_water" db-per-cut="9" db-per-meter="0.4" />
+<type id="tourism.motel" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.travel_agency" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.watches" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.archaeological_site" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.retail" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.tattoo" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.chocolate" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.wine" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.bakery" db-per-cut="9" db-per-meter="0.4" />
+<type id="sport.fitness" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.residential" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.paint" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.library" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.theatre" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.citywalls" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.ticket" db-per-cut="9" db-per-meter="0.4" />
+<type id="tourism.viewpoint" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.car services" db-per-cut="9" db-per-meter="0.4" />
+<type id="natural.scrub" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.foreign_trade" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.pottery" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.post_box" db-per-cut="9" db-per-meter="0.4" />
+<type id="tourism.guest_house" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.pier" db-per-cut="9" db-per-meter="0.4" />
+<type id="leisure.garden" db-per-cut="9" db-per-meter="0.4" />
+<type id="sport.soccer" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.castle" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.Natural_stones" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.shed" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.dormitory" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.car_wash" db-per-cut="9" db-per-meter="0.4" />
+<type id="tourism.artwork" db-per-cut="9" db-per-meter="0.4" />
+<type id="tourism.information" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.clock" db-per-cut="9" db-per-meter="0.4" />
+<type id="leisure.swimming_pool" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.ruins" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.shelter" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.pharmacy" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.cistern" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.grass" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.conference_centre" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.column" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.water_well" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.furniture" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.social_facility" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.pastry" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.aqueduct" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.transportation" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.variety_store" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.fast_food" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.hotel" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.aquaculture" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.power_equipment" db-per-cut="9" db-per-meter="0.4" />
+<type id="tourism.hotel" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.bicycle_rental" db-per-cut="9" db-per-meter="0.4" />
+<type id="natural.tree_row" db-per-cut="9" db-per-meter="0.4" />
+<type id="natural.hot_spring" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.tomb" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.motel" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.water_point" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.monitoring_station" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.baby_goods" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.household_items_shop" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.social_centre" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.greengrocer" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.hospital" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.parking" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.animal_food" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.fountain" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.pub" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.food_court" db-per-cut="9" db-per-meter="0.4" />
+<type id="natural.geyser" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.car_rental" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.construction" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.cemetery" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.turkish_bath" db-per-cut="9" db-per-meter="0.4" />
+<type id="sport.basketball" db-per-cut="9" db-per-meter="0.4" />
+<type id="natural.water" db-per-cut="9" db-per-meter="0.4" />
+<type id="leisure.pitch" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.antiques" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.shoes" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.charging_station" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.lighting" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.memorial" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.nightclub" db-per-cut="9" db-per-meter="0.4" />
+<type id="population.238762" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.public" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.doctors" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.carpet" db-per-cut="9" db-per-meter="0.4" />
+<type id="tourism.picnic_site" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.bar" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.beauty" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.church" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.tobacco" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.florist" db-per-cut="9" db-per-meter="0.4" />
+<type id="man_made.tunnel" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.hardware" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.mosque" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.public_building" db-per-cut="9" db-per-meter="0.4" />
+<type id="landuse.recreation_ground" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.department_store" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.kindergarten" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.support_tower" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.Dorms" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.ice_cream" db-per-cut="9" db-per-meter="0.4" />
+<type id="building.construction" db-per-cut="9" db-per-meter="0.4" />
+<type id="shop.mall" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.post_office" db-per-cut="9" db-per-meter="0.4" />
+<type id="historic.city_gate" db-per-cut="9" db-per-meter="0.4" />
+<type id="amenity.grave_yard" db-per-cut="9" db-per-meter="0.4" />
+            </obstacles>
+        </AnalogueModel>
+    </AnalogueModels>
+    <Decider type="Decider80211p">
+        <!-- The center frequency on which the phy listens-->
+        <parameter name="centerFrequency" type="double" value="5.890e9"/>
+    </Decider>
+</root>
