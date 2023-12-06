@@ -1,0 +1,18 @@
+version: '3.6'
+
+services:
+  main:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    restart: "no"
+    volumes:
+      - ./docker/docker-entrypoint.sh:/docker-entrypoint.sh:ro
+      - ./:/project:rw
+      - ./output:/tmp/veins-output:rw
+    tmpfs:
+      - /run:size=2G
+      - /dev/shm:size=8G
+      - /run/lock:size=5M
+    command:
+      /bin/sh -c "exec bash /docker-entrypoint.sh"

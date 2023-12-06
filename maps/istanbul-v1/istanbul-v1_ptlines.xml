@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Thu Jun 15 06:56:17 2023 by Eclipse SUMO netconvert Version 1.8.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="/usr/local/share/sumo/data/typemap/osmNetconvert.typ.xml"/>
+        <osm-files value="./istanbul-v1_bbox.osm.xml"/>
+    </input>
+
+    <output>
+        <output-file value="istanbul-v1.net.xml"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="istanbul-v1_stops.add.xml"/>
+        <ptline-output value="istanbul-v1_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <edge_removal>
+        <keep-edges.by-vclass value="passenger"/>
+    </edge_removal>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+        <railway.topology.repair.stop-turn value="true"/>
+    </railway>
+
+    <report>
+        <verbose value="true"/>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<ptLines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/ptlines_file.xsd">
+    <ptLine id="10380729" name="77A Vezneciler - Şişli" line="77A" type="bus" vClass="bus" completeness="0.22">
+        <route edges="1066826599 5169941 23276957"/>
+        <busStop id="6966299294" name="Şehzadebaşı (Edirnekapı Yönü)"/>
+        <busStop id="6966338358" name="Vefa"/>
+        <busStop id="6966341111" name="Unkapanı"/>
+        <busStop id="5482189628" name="Şişhane 6"/>
+    </ptLine>
+    <ptLine id="12030986" name="47Ç Güzeltepe-Eminönü" line="47Ç" type="bus" vClass="bus" completeness="1.00">
+        <busStop id="5115237221" name="Eminönü Transit (Unkapanı Yönü)"/>
+    </ptLine>
+    <ptLine id="12033484" name="70KE Kurtuluş-Eminönü" line="70KE" type="bus" vClass="bus" completeness="1.00">
+        <route edges="43915455#0 837903918#0 837903918#11 837903918#13 42141136#0 1160053324#0 1160053324#2 1160053324#3 1160053324#6 443790676#0 443790676#1 443790676#2 443790676#3 443790676#4 1150725755#0 827063324 5169873 91264144 910632857 1006582996 1181770075 91264122 23276976 23276966#0 5170334#0 5170334#1 5170334#4 1112371617#0 1112371611#0 1112371614 1164913793 1164913795 1164913794#0 1164913794#2 1164913794#3 183743129#0 1107348164#0 42141138#0 42141138#1 42141138#3 42141138#4 42141138#5 42141138#6 42141138#8 669715186#0 669715186#1 669715186#2 669715186#4 669715186#5 669715186#6 669715186#7 669715186#8 669715186#10 886025395#0 1035804753#0 158452644#1 837903919#0"/>
+        <busStop id="5115237221" name="Eminönü Transit (Unkapanı Yönü)"/>
+    </ptLine>
+    <ptLine id="12174615" name="T5: Alibeyköy Cep Otogari → Cibali" line="T5" type="tram" vClass="tram" completeness="0.17">
+        <busStop id="6801712679" name="Fener"/>
+        <busStop id="8225587072" name="Cibali"/>
+    </ptLine>
+    <ptLine id="12174616" name="T5: Cibali → Alibeyköy Cep Otogari" line="T5" type="tram" vClass="tram" completeness="0.17">
+        <busStop id="8225587071" name="Cibali"/>
+        <busStop id="2379809606" name="Fener"/>
+    </ptLine>
+    <ptLine id="12327960" name="EM1 Eminönü - Kulaksız" line="EM1" type="bus" vClass="bus" completeness="1.00">
+        <route edges="23236930#0 23236930#2 23236929#0 826449813 23639695 23639778 5170334#0 5170334#1 5170334#4 1112371617#0 1112371611#0 1112371614 1164913793 1164913795 1164913794#0 1164913794#2 1164913794#3 25539026#0 827063324 5169873 91264144 910632857 1006582996 1181770075 91264122 23276976 23276954 23639745#0 23639745#1 23639745#2 23236898 885823655#0 885823655#1 885823655#4 885823655#6 885823655#7 35411077#1 35411077#2 35411077#3"/>
+        <busStop id="5115237221" name="Eminönü Transit (Unkapanı Yönü)"/>
+    </ptLine>
+    <ptLine id="12327965" name="EM2 Eminönü - Kulaksız" line="EM2" type="bus" vClass="bus" completeness="1.00">
+        <busStop id="5115237221" name="Eminönü Transit (Unkapanı Yönü)"/>
+    </ptLine>
+    <ptLine id="12594323" name="26 Dikilitaş - Eminönü" line="26" type="bus" vClass="bus" completeness="0.50">
+        <route edges="43915455#0 837903918#0 837903918#11 837903918#13 42141136#0 1160053324#0 1160053324#2 1160053324#3 1160053324#6 443790676#0 443790676#1 443790676#2 443790676#3 443790676#4 1150725755#0 827063324 5169873 91264144 827063326 931813831 910632857 1006582996 1181770075 967292584 967292583 931813832 910632854#0 948757835 910632856#0 910632856#1 910632856#6 939444511 931813833 931815218 183697660#0 183697660#1 183697660#3 1033521274 1050713028 290731792#0 290731792#1 290731792#2 290731792#3 290731846 1107348161 290733242 931813835 4885624 931813837 42141138#0 42141138#1 42141138#3 42141138#4 42141138#5 42141138#6 42141138#8 669715186#0 669715186#1 669715186#2 669715186#4 669715186#5 669715186#6 669715186#7 669715186#8 669715186#10 886025395#0 1035804753#0 158452644#1 837903919#0"/>
+        <busStop id="5115237221" name="Eminönü Transit (Unkapanı Yönü)"/>
+    </ptLine>
+    <ptLine id="12594339" name="28 Beşiktaş - Topkapı" line="28" type="bus" vClass="bus" completeness="1.00">
+        <route edges="43915455#0 837903918#0 837903918#11 837903918#13 42141136#0 1160053324#0 1160053324#2 1160053324#3 1160053324#6 443790676#0 443790676#1 443790676#2 443790676#3 443790676#4 1150725755#0 827063324 5169873 91264144 827063326 931813831 910632857 1006582996 1181770075 967292584 967292583 91264109 5169941 90888385 747087382#0 747087382#1 747087382#2 747087382#4 931984378#0 931984378#1 747087378#0 747087378#1 1101578761#0 692988381#0 692988381#1 1101578763#0 1101578763#1 1101578763#2 1101578763#3 1101578763#5 692988380#0 692988380#2 692988380#3 1041142286#0 826449815 1101578759#0 685685426#0 685685426#3 747087386 1144466566#0 1144466566#4 91264104#0 91264104#1 91264104#2 183697660#0 183697660#1 183697660#3 1033521274 1050713028 290731792#0 290731792#1 290731792#2 290731792#3 290731846 1107348161 290733242 931813835 4885624 931813837 42141138#0 42141138#1 42141138#3 42141138#4 42141138#5 42141138#6 42141138#8 669715186#0 669715186#1 669715186#2 669715186#4 669715186#5 669715186#6 669715186#7 669715186#8 669715186#10 886025395#0 1035804753#0 158452644#1 837903919#0"/>
+        <busStop id="5115237221" name="Eminönü Transit (Unkapanı Yönü)"/>
+    </ptLine>
+    <ptLine id="14024724" name="R5 Yenikapı Marmaray - Yenikapı Etkinlik Alanı" line="R5" type="bus" vClass="bus" completeness="0.25">
+        <busStop id="9655525820" name="Yenikapı Marmaray (Aksaray Yönü)"/>
+    </ptLine>
+    <ptLine id="151819" name="T1 hattı: Bağcılar - Kabataş" line="T1" type="tram" vClass="tram" completeness="0.54">
+        <busStop id="3282362173" name="Pazartekke"/>
+        <busStop id="3282357344" name="Çapa - Şehremini"/>
+        <busStop id="4485971490" name="Fındıkzade"/>
+        <busStop id="3282357326" name="Haseki"/>
+        <busStop id="2368155181" name="Yusufpaşa"/>
+        <busStop id="3282357315" name="Aksaray"/>
+        <busStop id="4776796386" name="Beyazit - Kapali Carsi"/>
+        <busStop id="3282357299" name="Çemberlitaş"/>
+        <busStop id="3282349639" name="Sultanahmet"/>
+        <busStop id="3289765790" name="Gülhane"/>
+        <busStop id="3289767772" name="Sirkeci"/>
+        <busStop id="3282357359" name="Eminönü"/>
+        <busStop id="3289775017" name="Karaköy"/>
+        <busStop id="276948489" name="Tophane"/>
+        <busStop id="3289778526" name=""/>
+    </ptLine>
+    <ptLine id="2962729" name="T1 hattı: Kabataş - Bağcılar" line="T1" type="tram" vClass="tram" completeness="0.55">
+        <busStop id="3289778528" name=""/>
+        <busStop id="3289778527" name=""/>
+        <busStop id="3282412925" name="Tophane"/>
+        <busStop id="3289775018" name="Karaköy"/>
+        <busStop id="3282357358" name="Eminönü"/>
+        <busStop id="3289767773" name="Sirkeci"/>
+        <busStop id="3289765791" name="Gülhane"/>
+        <busStop id="3282349640" name="Sultanahmet"/>
+        <busStop id="537801381" name="Çemberlitaş"/>
+        <busStop id="4776796389" name=""/>
+        <busStop id="251899089" name="Aksaray"/>
+        <busStop id="2368155177" name="Yusufpaşa"/>
+        <busStop id="537801624" name="Haseki"/>
+        <busStop id="5499934372" name="Fındıkzade"/>
+        <busStop id="1164366991" name="Çapa-Şehremini"/>
+        <busStop id="975063493" name="Pazartekke"/>
+    </ptLine>
+    <ptLine id="301617" name="Taksim - Tünel Nostaljik Tramvay" line="Taksim - Tünel Nostaljik Tramvay" type="tram" vClass="tram" completeness="0.40">
+        <busStop id="6276056268" name="Odakule"/>
+        <busStop id="2775747127" name="Tünel"/>
+    </ptLine>
+    <ptLine id="326181" line="" type="ferry" vClass="ignoring" completeness="0.17">
+        <busStop id="4866045421" name="Fener"/>
+    </ptLine>
+    <ptLine id="4289742" name="Marmaray: Ataköy - Pendik" line="B1" type="train" vClass="rail" completeness="0.13">
+        <busStop id="7716752864" name="Yenikapı"/>
+        <busStop id="6395965590" name="Üsküdar"/>
+    </ptLine>
+    <ptLine id="4488483" name="Tünel - Taksim Nostaljik Tramvay" line="Tünel - Taksim Nostaljik Tramvay" type="tram" vClass="tram" completeness="0.40">
+        <busStop id="2775747127" name="Tünel"/>
+        <busStop id="6276056268" name="Odakule"/>
+    </ptLine>
+    <ptLine id="4511012" name="Marmaray: Pendik - Ataköy" line="Marmaray: Pendik - Ataköy" type="train" vClass="rail" completeness="0.13">
+        <busStop id="6395965591" name="Üsküdar"/>
+        <busStop id="7716752863" name="Yenikapı"/>
+    </ptLine>
+    <ptLine id="9468040" name="Marmaray: Gebze - Halkalı" line="B1" type="train" vClass="rail" completeness="0.07">
+        <busStop id="6395965591" name="Üsküdar"/>
+        <busStop id="7716752865" name="Sirkeci"/>
+        <busStop id="7716752863" name="Yenikapı"/>
+    </ptLine>
+    <ptLine id="9987139" name="Marmaray: Halkalı - Gebze" line="B1" type="train" vClass="rail" completeness="0.07">
+        <busStop id="7716752864" name="Yenikapı"/>
+        <busStop id="7716752866" name="Sirkeci"/>
+        <busStop id="6395965590" name="Üsküdar"/>
+    </ptLine>
+</ptLines>

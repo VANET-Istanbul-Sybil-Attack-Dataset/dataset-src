@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generated on 2023-08-03 00:13:08.201239 by $Id: ptlines2flows.py v1_3_1+0313-ccb31df3eb jakob.erdmann@dlr.de 2019-09-02 13:26:32 +0200 $ v1_8_0+0000-4820708f3db
+  options: -n /home/user/sumo-map/istanbul-v1/istanbul-v1.net.xml -e 4800 <doubleminus>random-begin <doubleminus>seed 576419 <doubleminus>ptstops /home/user/sumo-map/istanbul-v1/istanbul-v1_stops.add.xml <doubleminus>ptlines /home/user/sumo-map/istanbul-v1/istanbul-v1_ptlines.xml -o /home/user/sumo-map/istanbul-v1/istanbul-v1_pt.rou.xml <doubleminus>ignore-errors <doubleminus>vtype-prefix pt_ <doubleminus>stopinfos-file /home/user/sumo-map/istanbul-v1/istanbul-v1_pt.stopinfos.xml <doubleminus>routes-file /home/user/sumo-map/istanbul-v1/istanbul-v1_pt.vehroutes.xml <doubleminus>trips-file /home/user/sumo-map/istanbul-v1/istanbul-v1_pt.trips.xml <doubleminus>min-stops 0 <doubleminus>extend-to-fringe <doubleminus>verbose
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="pt_bus" vClass="bus"/>
+    <vType id="pt_tram" vClass="tram"/>
+    <vType id="pt_train" vClass="rail"/>
+    <vType id="pt_subway" vClass="rail_urban"/>
+    <vType id="pt_light_rail" vClass="rail_urban"/>
+    <vType id="pt_monorail" vClass="rail"/>
+    <vType id="pt_trolleybus" vClass="bus"/>
+    <vType id="pt_aerialway" vClass="bus"/>
+    <vType id="pt_ferry" vClass="ship"/>
+    <route id="pt_bus_47Ç:0" edges="1006582996" >
+        <stop busStop="5115237221" duration="30.00" until="31.0"/> <!-- Eminönü Transit (Unkapanı Yönü) -->
+    </route>
+    <route id="pt_bus_77A:0" edges="1066826599 5169941 91264112 1121082741 931813833 91264113 1066826596 5169943 23276976 23276954 23276954.77 23639745#0 23639745#1 23639745#2 753363621 1064645868 23236954-AddedOnRampEdge 23236954 28585058#0 1120744123#2 1064645867 23236879 826449813 827063322#0 827063322#1 827063322#1.69 23276957" >
+    </route>
+    <route id="pt_bus_EM2:0" edges="1006582996" >
+        <stop busStop="5115237221" duration="30.00" until="31.0"/> <!-- Eminönü Transit (Unkapanı Yönü) -->
+    </route>
+    <route id="pt_bus_EM1:0" edges="23236930#0 23236930#2 23236929#0 826449813 23639695 23639778 5170334#0 5170334#1 1112371617#0 1112371611#0 1112371614 1164913793 1164913795 1164913794#0 1164913794#2 1164913794#3 25539026#0 827063324 5169873 91264144 827063326 931813831 910632857 1006582996 1181770075 1181770075.112 1181770075.209 1181770075.209.153 91264122 23276976 23276954 23276954.77 23639745#0 23639745#1 23639745#2 23236898 885823655#0 885823655#1 885823655#4 885823655#6 885823655#7 35411077#1 35411077#2 35411077#3" >
+        <stop busStop="5115237221" duration="30.00" until="234.0"/> <!-- Eminönü Transit (Unkapanı Yönü) -->
+    </route>
+    <route id="pt_bus_70KE:0" edges="43915455#0 837903918#0 837903918#11 837903918#11.71 837903918#13 42141136#0 1160053324#0 1160053324#2 1160053324#3 1160053324#6 443790676#0 443790676#1 443790676#2 443790676#3 443790676#4 1150725755#0 827063324 5169873 91264144 827063326 931813831 910632857 1006582996 1181770075 1181770075.112 1181770075.209 1181770075.209.153 91264122 23276976 23276966#0 5170334#0 5170334#1 1112371617#0 1112371611#0 1112371614 1164913793 1164913795 1164913794#0 1164913794#2 1164913794#3 183743129#0 1107348164#0 42141138#0 42141138#1 42141138#3 42141138#4 42141138#5 42141138#6 42141138#8 669715186#0 669715186#1 669715186#2 669715186#4 669715186#5 669715186#6 669715186#7 669715186#8 669715186#10 886025395#0 1035804753#0 158452644#1 837903919#0" >
+        <stop busStop="5115237221" duration="30.00" until="274.0"/> <!-- Eminönü Transit (Unkapanı Yönü) -->
+    </route>
+    <route id="pt_bus_28:0" edges="43915455#0 837903918#0 837903918#11 837903918#11.71 837903918#13 42141136#0 1160053324#0 1160053324#2 1160053324#3 1160053324#6 443790676#0 443790676#1 443790676#2 443790676#3 443790676#4 1150725755#0 827063324 5169873 91264144 827063326 931813831 910632857 1006582996 1181770075 1181770075.112 1181770075.209 1181770075.209.153 91264122 23276976 23276966#0 5170334#0 5170334#1 1112371617#0 1112371611#0 1112371614 1164913793 1164913795 1164913794#0 1164913794#2 1164913794#3 183743129#0 1107348164#0 42141138#0 42141138#1 42141138#3 42141138#4 42141138#5 42141138#6 42141138#8 669715186#0 669715186#1 669715186#2 669715186#4 669715186#5 669715186#6 669715186#7 669715186#8 669715186#10 886025395#0 1035804753#0 158452644#1 837903919#0" >
+        <stop busStop="5115237221" duration="30.00" until="364.0"/> <!-- Eminönü Transit (Unkapanı Yönü) -->
+    </route>
+    <route id="pt_bus_26:0" edges="43915455#0 837903918#0 837903918#11 837903918#11.71 837903918#13 42141136#0 1160053324#0 1160053324#2 1160053324#3 1160053324#6 443790676#0 443790676#1 443790676#2 443790676#3 443790676#4 1150725755#0 827063324 5169873 91264144 827063326 931813831 910632857 1006582996 1181770075 1181770075.112 1181770075.209 1181770075.209.153 91264122 23276976 23276966#0 5170334#0 5170334#1 1112371617#0 1112371611#0 1112371614 1164913793 1164913795 1164913794#0 1164913794#2 1164913794#3 183743129#0 1107348164#0 42141138#0 42141138#1 42141138#3 42141138#4 42141138#5 42141138#6 42141138#8 669715186#0 669715186#1 669715186#2 669715186#4 669715186#5 669715186#6 669715186#7 669715186#8 669715186#10 886025395#0 1035804753#0 158452644#1 837903919#0" >
+        <stop busStop="5115237221" duration="30.00" until="274.0"/> <!-- Eminönü Transit (Unkapanı Yönü) -->
+    </route>
+    <flow id="pt_bus_47Ç:0" type="pt_bus" route="pt_bus_47Ç:0" begin="48.0" end="4848.0" period="600" line="47Ç:0" >
+        <param key="name" value="47Ç Güzeltepe-Eminönü"/>
+        <param key="completeness" value="1.00"/>
+    </flow>
+    <flow id="pt_bus_77A:0" type="pt_bus" route="pt_bus_77A:0" begin="26.0" end="4826.0" period="600" line="77A:0" >
+        <param key="name" value="77A Vezneciler - Şişli"/>
+        <param key="completeness" value="0.22"/>
+    </flow>
+    <flow id="pt_bus_EM2:0" type="pt_bus" route="pt_bus_EM2:0" begin="239.0" end="5039.0" period="600" line="EM2:0" >
+        <param key="name" value="EM2 Eminönü - Kulaksız"/>
+        <param key="completeness" value="1.00"/>
+    </flow>
+    <flow id="pt_bus_EM1:0" type="pt_bus" route="pt_bus_EM1:0" begin="193.0" end="4993.0" period="600" line="EM1:0" >
+        <param key="name" value="EM1 Eminönü - Kulaksız"/>
+        <param key="completeness" value="1.00"/>
+    </flow>
+    <flow id="pt_bus_70KE:0" type="pt_bus" route="pt_bus_70KE:0" begin="92.0" end="4892.0" period="600" line="70KE:0" >
+        <param key="name" value="70KE Kurtuluş-Eminönü"/>
+        <param key="completeness" value="1.00"/>
+    </flow>
+    <flow id="pt_bus_28:0" type="pt_bus" route="pt_bus_28:0" begin="298.0" end="5098.0" period="600" line="28:0" >
+        <param key="name" value="28 Beşiktaş - Topkapı"/>
+        <param key="completeness" value="1.00"/>
+    </flow>
+    <flow id="pt_bus_26:0" type="pt_bus" route="pt_bus_26:0" begin="266.0" end="5066.0" period="600" line="26:0" >
+        <param key="name" value="26 Dikilitaş - Eminönü"/>
+        <param key="completeness" value="0.50"/>
+    </flow>
+</routes>
