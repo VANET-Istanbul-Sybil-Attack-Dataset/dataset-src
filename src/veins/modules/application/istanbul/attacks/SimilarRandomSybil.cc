@@ -30,7 +30,7 @@ void SimilarRandomSybil::init() {
         cout << "pseudonyms " << pseudonyms[i] << endl;
     }
     PowerControlAttackBase::init(sybilNodeCount);
-
+    cout << log << endl;
     std::cout << "SimilarRandomSybil::init END" << endl;
 }
 

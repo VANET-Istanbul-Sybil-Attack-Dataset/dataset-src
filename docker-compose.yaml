@@ -14,5 +14,8 @@ services:
       - /run:size=2G
       - /dev/shm:size=8G
       - /run/lock:size=5M
+    environment:
+      # - DATASET_MAP=veins
+      - DATASET_MAP=istanbul-v1
     command:
       /bin/sh -c "exec bash /docker-entrypoint.sh"

@@ -35,6 +35,7 @@ void RandomSybil::init(attackTypes::Attacks myAttackType, double MaxRandomPosX, 
 
     seq = 0;
     PowerControlAttackBase::init(sybilNodeCount);
+    cout << log << endl;
     std::cout << "RandomSybil::init END" << endl;
 }
 

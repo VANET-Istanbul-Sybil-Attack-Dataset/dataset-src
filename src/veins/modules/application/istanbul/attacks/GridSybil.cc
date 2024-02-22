@@ -1,4 +1,5 @@
 #include <veins/modules/application/istanbul/attacks/GridSybil.h>
+#include <veins/modules/application/istanbul/IstanbulDsParams.h>
 #include <list>
 
 
@@ -20,7 +21,10 @@ void GridSybil::init() {
     std::cout << "GridSybil::init START" << endl;
 
     int sybilNodeCountSelect[] = { 10, 9, 6, 5, 3 };
-    sybilNodeCount = sybilNodeCountSelect[genLib.RandomInt(0, 4)];
+    if (istanbulDsParams.selectedGridShape == -1)
+      sybilNodeCount = sybilNodeCountSelect[genLib.RandomInt(0, 4)];
+    else
+      sybilNodeCount = sybilNodeCountSelect[istanbulDsParams.selectedGridShape];
     cout << "sybilNodeCount: " << sybilNodeCount << endl;
 
     seq = 0;
@@ -29,7 +33,7 @@ void GridSybil::init() {
         cout << "pseudonyms " << pseudonyms[i] << endl;
     }
     PowerControlAttackBase::init(sybilNodeCount);
-
+    cout << log << endl;
     std::cout << "GridSybil::init END" << endl;
 }
 

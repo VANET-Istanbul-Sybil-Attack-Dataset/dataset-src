@@ -38,18 +38,18 @@
         <AnalogueModel type="TwoRayInterferenceModel">
             <parameter name="DielectricConstant" type="double" value="1.02"/>
         </AnalogueModel>
-    	-->
-
-    	<!--
+        -->
+        
         <AnalogueModel type="SimplePathlossModel" thresholding="true">
             <parameter name="alpha" type="double" value="2.0"/>
         </AnalogueModel>
-        -->
-
+        
+		<!--
         <AnalogueModel type="ShadowingModel" thresholding="true">
 			<parameter name="dist0" type="double" value="1.0"/>
 			<parameter name="std_db" type="double" value="1.75"/>
         </AnalogueModel>
+        -->
 
         <!--
         <AnalogueModel type="DualSlopeModel" thresholding="true">
@@ -381,6 +381,11 @@
 				<type id="historic.city_gate" db-per-cut="9" db-per-meter="0.4" />
 				<type id="amenity.grave_yard" db-per-cut="9" db-per-meter="0.4" />
             </obstacles>
+        </AnalogueModel>
+        
+        <AnalogueModel type="LogNormalShadowing" thresholding="true">
+			<parameter name="mean" type="double" value="0.5"/>
+			<parameter name="stdDev" type="double" value="0.25"/>
         </AnalogueModel>
         
     </AnalogueModels>

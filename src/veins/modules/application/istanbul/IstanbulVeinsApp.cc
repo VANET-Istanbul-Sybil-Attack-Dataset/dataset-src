@@ -65,8 +65,12 @@ void IstanbulVeinsApp::initialize(int stage)
     istanbulDsParams.probReplaySybil = par("probReplaySybil");
     istanbulDsParams.probSimilarRandomSybil = par("probSimilarRandomSybil");
     istanbulDsParams.probPowerControl = par("probPowerControl");
+    istanbulDsParams.powerControlMinPulseWidth = par("powerControlMinPulseWidth");
+    istanbulDsParams.powerControlMaxPulseWidth = par("powerControlMaxPulseWidth");
     istanbulDsParams.minSybilNodeCount = par("minSybilNodeCount");
     istanbulDsParams.maxSybilNodeCount = par("maxSybilNodeCount");
+    istanbulDsParams.selectedGridShape = par("selectedGridShape");
+    istanbulDsParams.selectedPowerControlType = par("selectedPowerControlType");
 
     if (stage == 1) {
         logger.init(params.savePath, params.serialNumber, myId,

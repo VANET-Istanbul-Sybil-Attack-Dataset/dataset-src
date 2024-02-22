@@ -44,6 +44,7 @@
 // taner
 #include "veins/modules/analogueModel/ShadowingModel.h"
 #include "veins/modules/analogueModel/DualSlopeModel.h"
+#include "veins/modules/analogueModel/LogNormalShadowing.h"
 
 
 using namespace veins;
@@ -77,6 +78,9 @@ unique_ptr<AnalogueModel> PhyLayer80211p::getAnalogueModelFromName(std::string n
 
     if (name == "SimplePathlossModel") {
         return initializeSimplePathlossModel(params);
+    }
+    if (name == "LogNormalShadowing") {
+        return initializeLogNormalShadowing(params);
     }
     else if (name == "ShadowingModel") {
         return initializeShadowingModel(params);
@@ -235,6 +239,20 @@ unique_ptr<AnalogueModel> PhyLayer80211p::initializeShadowingModel(ParameterMap&
     double pathlossExp = (it != params.end()) ? it->second.doubleValue() : 2.0;
 
     return make_unique<ShadowingModel>(this, useTorus, playgroundSize, dist0, std_db, pathlossExp);
+}
+
+unique_ptr<AnalogueModel> PhyLayer80211p::initializeLogNormalShadowing(ParameterMap& params)
+{
+    bool useTorus = world->useTorus();
+    const Coord& playgroundSize = *(world->getPgs());
+
+    ParameterMap::iterator it = params.find("mean");
+    double mean = (it != params.end()) ? it->second.doubleValue() : 1.0;
+
+    it = params.find("stdDev");
+    double stdDev = (it != params.end()) ? it->second.doubleValue() : 0.0;
+
+    return make_unique<LogNormalShadowing>(this, useTorus, playgroundSize, mean, stdDev);
 }
 
 unique_ptr<AnalogueModel> PhyLayer80211p::initializeDualSlopeModel(ParameterMap &params) {

@@ -30,6 +30,7 @@ private:
 protected:
     IPowerControlAttack* powerControl[MAX_SYBIL_NUM];
     int powerControlType;
+    char log[128];
 public:
     void init(int sybilNodeCount);
     virtual int getPowerControlType() {

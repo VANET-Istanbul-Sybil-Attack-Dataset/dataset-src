@@ -31,7 +31,7 @@ void ReplaySybil::init() {
         cout << "pseudonyms " << pseudonyms[i] << endl;
     }
     PowerControlAttackBase::init(sybilNodeCount);
-
+    cout << log << endl;
     std::cout << "ReplaySybil::init END" << endl;
 }
 
@@ -77,27 +77,15 @@ BasicSafetyMessage ReplaySybil::launchAttack(LinkControl *LinkC) {
 
     if (targets[seq] == 0)
         targets[seq] = nextTarget;
-    if (targets[seq] == 0) {
-        // TODO: target not found
-        // cout << pseudonyms[seq] << " target not found" << endl;
-        return emptyBsm();
+
+    BasicSafetyMessage attackBsm = emptyBsm();
+    if (targets[seq] != 0) {
+        BasicSafetyMessage *_attackBsm = detectedNodes->getLastBSM(targets[seq]);
+        if (_attackBsm)
+            attackBsm = *_attackBsm;
     }
-
-    BasicSafetyMessage *_attackBsm = detectedNodes->getLastBSM(targets[seq]);
-    if (_attackBsm == NULL) {
-        // cout << pseudonyms[seq] << " bsm not found" << endl;
-        return emptyBsm();
-    }
-
-    BasicSafetyMessage attackBsm = *_attackBsm;
-
-    if (targets[seq] != attackBsm.getSenderPseudonym())
-        cout << "WARNING" << endl;
 
     times[seq] = attackBsm.getArrivalTime().dbl();
-
-    // cout << attackBsm.getSenderRealId() << " " << attackBsm.getTreeId() << endl;
-
     attackBsm.setSenderPseudonym(pseudonyms[seq]);
     attackBsm.setPowerControlType(powerControlType);
     if (powerControl[seq])

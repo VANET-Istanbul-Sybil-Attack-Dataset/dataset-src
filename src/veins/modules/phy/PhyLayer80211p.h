@@ -99,6 +99,7 @@ protected:
     // taner
     std::unique_ptr<AnalogueModel> initializeShadowingModel(ParameterMap& params);
     std::unique_ptr<AnalogueModel> initializeDualSlopeModel(ParameterMap& params);
+    std::unique_ptr<AnalogueModel> initializeLogNormalShadowing(ParameterMap& params);
 
     /**
      * @brief Creates and initializes an AntennaModel with the

@@ -10,11 +10,18 @@ static const double pattern_sawtooth_discrete2_9[] = { 1.0, 0.875, 0.75, 0.625, 
 
 void PowerControlAttackBase::init(int sybilNodeCount) {
 
-    if (genLib.RandomDouble(0, 1.0) < istanbulDsParams.probPowerControl)
-        powerControlType = genLib.RandomInt(1, 5);
-    else
-        powerControlType = 0;
+    if (istanbulDsParams.selectedPowerControlType == -1) {
+        if (genLib.RandomDouble(0, 1.0) < istanbulDsParams.probPowerControl)
+            powerControlType = genLib.RandomInt(1, 5);
+        else
+            powerControlType = 0;
+    } else {
+        powerControlType = istanbulDsParams.selectedPowerControlType;
+    }
 
+    cout << "probPowerControl:" << istanbulDsParams.probPowerControl << endl;
+    cout << "powerControlMinPulseWidth:" << istanbulDsParams.powerControlMinPulseWidth << endl;
+    cout << "powerControlMaxPulseWidth:" << istanbulDsParams.powerControlMaxPulseWidth << endl;
     cout << "powerControlType: " << powerControlType << endl;
 
     if (powerControlType == PowerControlType_Disabled) {
@@ -27,9 +34,12 @@ void PowerControlAttackBase::init(int sybilNodeCount) {
             pc->init(17, 23, 0.5);
             powerControl[i] = pc;
         }
+        sprintf(log, "pc,random,17.0,23.0,0.5;");
 
     } else if (powerControlType == PowerControlType_Rectangular) {
-        int pulseWidth = 10 + 10 * genLib.RandomInt(0, 4);  // [10, 20, 30, 40, 50]
+        // int pulseWidth = 10 + 10 * genLib.RandomInt(0, 4);  // [10, 20, 30, 40, 50]
+        int pulseWidth = istanbulDsParams.powerControlMinPulseWidth +
+            genLib.RandomInt(0, istanbulDsParams.powerControlMaxPulseWidth-istanbulDsParams.powerControlMinPulseWidth);
         double low = 17.0;
         double high = 23.0;
         for (int i = 0; i < sybilNodeCount; i++) {
@@ -38,9 +48,12 @@ void PowerControlAttackBase::init(int sybilNodeCount) {
             pc->init(low, high, pulseWidth, shift);
             powerControl[i] = pc;
         }
+        sprintf(log, "pc,rectangular,%d,%.1f,%.1f;", pulseWidth, low, high);
 
     } else if (powerControlType == PowerControlType_Stairs) {
-        int pulseWidth = 10 + 10 * genLib.RandomInt(0, 2); // [10, 20, 30]
+        // int pulseWidth = 10 + 10 * genLib.RandomInt(0, 2); // [10, 20, 30]
+        int pulseWidth = istanbulDsParams.powerControlMinPulseWidth +
+                genLib.RandomInt(0, istanbulDsParams.powerControlMaxPulseWidth-istanbulDsParams.powerControlMinPulseWidth);
         int type = genLib.RandomInt(0, 1);
         double low = 15.0;
         double high = 25.0;
@@ -50,9 +63,12 @@ void PowerControlAttackBase::init(int sybilNodeCount) {
             pc->init(type, low, high, pulseWidth, shift);
             powerControl[i] = pc;
         }
+        sprintf(log, "pc,stairs,%d,%d,%.1f,%.1f;", pulseWidth, type, low, high);
 
     } else if (powerControlType == PowerControlType_SawtoothDiscrete) {
-        int pulseWidth = 10 + 10 * genLib.RandomInt(0, 2); // [10, 20, 30]
+        // int pulseWidth = 10 + 10 * genLib.RandomInt(0, 2); // [10, 20, 30]
+        int pulseWidth = istanbulDsParams.powerControlMinPulseWidth +
+                genLib.RandomInt(0, istanbulDsParams.powerControlMaxPulseWidth-istanbulDsParams.powerControlMinPulseWidth);
         int type = genLib.RandomInt(0, 1);
         double low = 15.0;
         double high = 25.0;
@@ -62,6 +78,7 @@ void PowerControlAttackBase::init(int sybilNodeCount) {
             pc->init(type, low, high, pulseWidth, shift);
             powerControl[i] = pc;
         }
+        sprintf(log, "pc,sawtooth-c,%d,%d,%.1f,%.1f;", pulseWidth, type, low, high);
 
     } else if (powerControlType == PowerControlType_SawtoothContinuous) {
         int stepCount = 10 + genLib.RandomDouble(0, 40);
@@ -74,6 +91,7 @@ void PowerControlAttackBase::init(int sybilNodeCount) {
             pc->init(reverse, stepCount, low, high, shift);
             powerControl[i] = pc;
         }
+        sprintf(log, "pc,sawtooth-d,%d,%d,%.1f,%.1f;", stepCount, reverse ? 1 : 0, low, high);
 
     } else {
         getSimulation()->getActiveEnvir()->alert("ReplaySybil::init unknown power control method");
@@ -104,9 +122,15 @@ void PowerControlAttackRepeatedPattern::init(const double* pattern, int stateCou
 }
 
 void PowerControlAttackRepeatedPattern::apply(BasicSafetyMessage &bsm) {
-    if (++counter > pulseWidth * stateCount)
+    if (++counter >= pulseWidth * stateCount)
         counter = 0;
     double value = low + (high - low) * pattern[counter / pulseWidth];
+    if (value < 15 || value > 25) {
+        cout << "low:" << low << " high:" << high << " counter:" << counter << " pulseWidth:" << pulseWidth << " stateCount:" << stateCount << endl;
+        cout << "power control value:" << value << endl;
+        getSimulation()->getActiveEnvir()->alert("wrong power control value");
+        exit(1);
+    }
     bsm.setPowerControlTxPower(value);
 }
 

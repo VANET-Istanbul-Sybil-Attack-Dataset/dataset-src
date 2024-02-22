@@ -1,7 +1,7 @@
 This repo created within the study titled "Creating A Realistic Sybil Attack Dataset For Inter-vehicle Communication".
 
 The dataset can be accessed from the link below.
-https://drive.google.com/file/d/1_8JC2FWAW6OWsD0HYFPph1i3oV4_ICrJ/view?usp=sharing
+https://drive.google.com/file/d/1uMNMNs3pVTJWbuPxmmqmv-fUFH7ymgJi/view?usp=drive_link
 
 The code base was created by integrating F2MD [https://github.com/josephkamel/F2MD] on Veins version 5.2. The map and traffic model described in the article have been added, and additions have been made to attack and dataset creation.
 

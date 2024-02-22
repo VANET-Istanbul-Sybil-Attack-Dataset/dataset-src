@@ -9,9 +9,13 @@ public:
     double probGridSybil;
 
     double probPowerControl;
-
+    int powerControlMinPulseWidth;
+    int powerControlMaxPulseWidth;
+    int selectedPowerControlType;
+  
     int minSybilNodeCount;
     int maxSybilNodeCount;
+    int selectedGridShape;
 };
 
 extern IstanbulDsParams istanbulDsParams;
