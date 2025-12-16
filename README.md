@@ -1,7 +1,7 @@
-# Important Notice Regarding Data and Code Availability
+## Important Notice Regarding Data and Code Availability
 
-Access to the data and code in this repository is currently **restricted by the owner**.
+Access to the data and code in this repository is **permanently restricted by the owner**.
 
-This action is necessary pending the resolution of a formal inquiry regarding authorship and intellectual property rights. The matter is being addressed through official institutional channels.
+This action was taken to protect **intellectual property rights** following the unauthorized publication of the associated article. The resources will not be made available for this publication.
 
-Thank you for your understanding.
+Contrary to claims made in any external publication linking here, these resources **are not available** and will not be provided.
