@@ -1,4 +1,8 @@
-## Important Notice Regarding Data and Code Availability
+## Do not use or cite this work.
+
+As the dataset owner and original author, I did not authorize the publication of the associated article. **I am actively pursuing the permanent removal of this article from the journal**.
+
+## Data and Code Availability
 
 Access to the data and code in this repository is **strictly restricted by the owner**.
 
