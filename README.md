@@ -10,4 +10,4 @@ This action was taken to protect **intellectual property rights** following the 
 
 Contrary to claims made in any external publication linking here, these resources **are not available** and will not be provided.
 
-**Warning:** Any copies of the dataset dump files (specifically the six .xz files, totaling approximately 93 GB) are subject to copyright infringement claims.
+**Warning:** Any copies of the **dataset dump files** (specifically the six .xz files, totaling approximately 93 GB) are **subject to copyright infringement claims.**
