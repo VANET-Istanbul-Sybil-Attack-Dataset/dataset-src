@@ -30,7 +30,7 @@ Any hosting, mirroring, or distribution of these `.xz` files on **any external s
 
 The presence of this data in any "Data Availability Statement" in published literature was made without the owner's signature or consent.
 
-**Current Legal Status:** STRICTLY CONFIDENTIAL / UNDER LEGAL DISPUTE.
+**Current Legal Status:** UNAUTHORIZED DISTRIBUTION STRICTLY PROHIBITED / UNDER LEGAL DISPUTE.
 
 ## 4. Statement of Original Ownership & Resource Investment
 The dataset files, hosted on the owner's personal Google Drive, are the result of significant personal investment and independent labor by the owner (Taner Guven).
